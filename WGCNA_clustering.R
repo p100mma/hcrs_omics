@@ -4,8 +4,7 @@
 
     plot_dth<- function(dth)   plot(dth, labels = FALSE, check=FALSE)
 
-
-X<- readRDS('~/ECAI_computations/rdsFiles/gene_expr_data.rds')
+source('getXandV_X.R')
 
 TM= tom(abs(cor(X))^5)
 message('done TOM')

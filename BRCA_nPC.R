@@ -6,8 +6,7 @@ source('blockwisePCA_R_engine.R')
 args=commandArgs(trailingOnly=TRUE)
 k = as.integer(args[[1]])
 
-X<- readRDS('~/ECAI_computations/rdsFiles/gene_expr_data.rds')
-V_X<- apply(X,2,var)
+source('getXandV_X.R')
 
 cldir=file.path(getwd(),'clusterings')
 init_similarity_matrix_name='S_X'

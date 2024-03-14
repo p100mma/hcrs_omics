@@ -6,8 +6,7 @@
 
 
     readRDS('reconstruction_results.rds')-> reclist
-X<- readRDS('~/ECAI_computations/rdsFiles/gene_expr_data.rds')
-
+source('getXandV_X.R')
     noise_mask =  !( (1: ncol(X)) %in% c( reclist$rec_hclust[['1']],reclist$rec_hclust[['2']],reclist$rec_hclust[['3']]  ) )
 
 readRDS( 'plainSVDreconstruct70.rds')->SVD_res70
