@@ -83,5 +83,6 @@ Summary of results (run after Experiment I & II):
 - `concat_tables.R`
 
 Topology characteristics plots & KS distances (latter in the supplementary material):
-- `topology_plots_KSdistances.R`
- 
+- `topology_plots_KSdistances.R`*
+
+*Should be run after Experiment I and `computation_heavy_metrics.R`
