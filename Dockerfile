@@ -15,7 +15,7 @@ RUN mkdir /home/hcrs_omics
 RUN mkdir /home/MCL
 
 
-RUN wget -O /home/MCL/soft.gz  https://micans.org/mcl/src/mcl-14-137.tar.gz \
+RUN wget -O /home/MCL/soft.gz  'https://micans.org/mcl/src/mcl-14-137.tar.gz' \
 && tar -xf '/home/MCL/soft.gz' -C /home/MCL 
 
 WORKDIR /home/hcrs_omics
