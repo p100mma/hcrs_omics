@@ -3,6 +3,20 @@
 ## License
 The software is licensed under the GNU General Public License, version 3.
 
+## How to run using docker
+
+Run the docker daemon in seprate terminal window if its not set up
+
+	sudo dockerd
+
+Then run following commands
+
+	git clone https://github.com/p100mma/hcrs_omics
+	cd hcrs_omics
+	sudo docker build -t hcrs .
+	sudo docker run -it -v .:/home/hcrs_omics hcrs
+
+
 ## Uses:
 
 MCL software:
