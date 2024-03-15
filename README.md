@@ -32,25 +32,49 @@ R packages used:
 - rmetalog
 - DynamicTreeCut
 
+## Input data
+
+`gene_expr_data.rds` - gene expression profiles of 1394 breast cancer patients, 8673 genes.
+Original source:
+- Pereira B et al. The somatic mutation profiles of 2, 433 breast cancers refine their genomic and transcriptomic landscapes. Nature Communications, 2016; 7.1
+
+Preprocessed and prefiltered as in:
+- Polewko-Klim A, Mnich K, Rudnicki W, Robust Data Integration Method for Classification of Biomedical Data. Journal ofMedical Systems, 2021; 45.
+
+## Code
+
 functions doing most of the work
 - `blockwisePCA_R_engine.R`
 
-Experiment I:
+Experiment I (run in that order):
 - `BRCA_decomposition.R`
-- `metalogs.R`
+- `metalogs.R`*
 - `BRCA_simulation.R`
 - `WGCNA_clustering.R`
 - `WGCNA_simulation.R`
 - `plain_SVD.R`
 
-Experiment II:
-- `BRCA_nPC.R`
+*`metalogs.R` should be run with command line argument ranging from 1 to 70:
 
-TOM plots:
+	Rscript --no-save metalogs.R 1
+ 	#(...)
+  	Rscript --no-save metalogs.R 70
+   
+We have used a HPC system to run this part in parallel.
+
+
+Experiment II:
+- `BRCA_nPC.R` - should be run with command line argument ranging from 2 to 5:
+  
+        Rscript --no-save BRCA_nPC.R 2
+        #(...)
+        Rscript --no-save BRCA_nPC.R 5
+
+TOM plots (run after executing Experiment I scripts):
 - `tom.R`
 - `tomPlots.R`
 
-Summary of results:
+Summary of results (run after Experiment I & II):
 - `computation_heavy_metrics.R`
 - `nPC_comparison_table.R`
 - `sim_comparison_table.R`
