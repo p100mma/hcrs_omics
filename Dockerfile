@@ -9,3 +9,6 @@ RUN install2.r --error --skipinstalled --ncpus -1 \
     rmetalog 
 
 CMD ["/bin/bash"]
+CMD ["cd /home/"]
+CMD ["mkdir hcrs_omics"]
+CMD ["cd hcrs_omics"]
