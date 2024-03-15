@@ -8,7 +8,6 @@ RUN install2.r --error --skipinstalled --ncpus -1 \
     dynamicTreeCut \
     rmetalog 
 
+RUN mkdir /home/hcrs_omics
+WORKDIR /home/hcrs_omics
 CMD ["/bin/bash"]
-CMD ["cd /home/"]
-CMD ["mkdir hcrs_omics"]
-CMD ["cd hcrs_omics"]
