@@ -1,5 +1,5 @@
 readRDS('reconstruction_results.rds')-> reclist
-X<- readRDS('~/ECAI_computations/rdsFiles/gene_expr_data.rds')
+source('getXandV_X.R')
 WGCNA_res<- readRDS('WGCNA_sim_and_cl.rds')
 WGCNA_tab=WGCNA_res[[1]]
 WGCNA_tab<- scale(WGCNA_tab, center=TRUE, scale=TRUE)
