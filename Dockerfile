@@ -2,6 +2,9 @@ FROM rocker/r-ver:4.3.1
 
 COPY *.R root/
 
+RUN apt-get update && \
+    apt-get install wget -y
+
 RUN install2.r --error --skipinstalled --ncpus -1 \
     Hmisc \
     data.table \
@@ -13,7 +16,7 @@ RUN mkdir /home/MCL
 
 
 RUN wget -O /home/MCL/soft.gz  https://micans.org/mcl/src/mcl-14-137.tar.gz \
-&& tar -xf '/home/MCL/soft.gz' -d /home/MCL 
+&& tar -xf '/home/MCL/soft.gz' -C /home/MCL 
 
 WORKDIR /home/hcrs_omics
 CMD ["/bin/bash"]

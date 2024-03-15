@@ -1,5 +1,16 @@
 # hcrs_omics
 
+## License
+The software is licensed under the GNU General Public License, version 3.
+
+## Uses:
+
+MCL software:
+
+https://micans.org/mcl/src/mcl-14-137.tar.gz
+
+
+
 R packages used:
 - Hmisc
 - Matrix
