@@ -6,6 +6,6 @@ RUN install2.r --error --skipinstalled --ncpus -1 \
     Hmisc \
     data.table \
     dynamicTreeCut \
-    rmetalog \
+    rmetalog 
 
 CMD ["R"]
