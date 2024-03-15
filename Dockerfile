@@ -8,3 +8,4 @@ RUN install2.r --error --skipinstalled --ncpus -1 \
     dynamicTreeCut \
     rmetalog 
 
+CMD /bin/bash
