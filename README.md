@@ -19,11 +19,11 @@ Then run following commands
 
 ## Uses:
 
-MCL software:
+MCL software (ver 14-137):
 
 https://micans.org/mcl/src/mcl-14-137.tar.gz
 
-
+R version 4.3.1
 
 R packages used:
 - Hmisc
@@ -60,7 +60,7 @@ Experiment I (run in that order):
  	#(...)
   	Rscript --no-save metalogs.R 70
    
-We have used a HPC system to run this part in parallel.
+We have used an HPC system to run this part in parallel.
 
 
 Experiment II:
@@ -70,7 +70,9 @@ Experiment II:
         #(...)
         Rscript --no-save BRCA_nPC.R 5
 
-TOM plots (run after executing Experiment I scripts):
+We have used an HPC system to run this part in parallel.
+
+TOM hierarchical clustering plots (run after executing Experiment I scripts):
 - `tom.R`
 - `tomPlots.R`
 
