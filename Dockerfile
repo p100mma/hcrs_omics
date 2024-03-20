@@ -10,7 +10,7 @@ RUN mkdir -p ~/miniconda3 && \
 
 RUN ~/miniconda3/bin/conda init bash
 RUN ~/miniconda3/bin/conda init zsh
-RUN ~/.bashrc
+RUN bash ~/.bashrc
 RUN conda install -c bioconda mcl
 # Install MCL via Conda
 #RUN conda install -c bioconda mcl
