@@ -12,7 +12,7 @@ RUN ~/miniconda3/bin/conda init bash
 RUN ~/miniconda3/bin/conda init zsh
 
 # Install MCL via Conda
-RUN conda install -c bioconda mcl
+#RUN conda install -c bioconda mcl
 
 RUN install2.r --error --skipinstalled --ncpus -1 \
     Hmisc \
