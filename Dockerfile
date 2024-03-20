@@ -8,8 +8,8 @@ RUN mkdir -p ~/miniconda3 && \
     bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 
 
-~/miniconda3/bin/conda init bash
-~/miniconda3/bin/conda init zsh
+RUN ~/miniconda3/bin/conda init bash
+RUN ~/miniconda3/bin/conda init zsh
 
 # Install MCL via Conda
 RUN conda install -c bioconda mcl
