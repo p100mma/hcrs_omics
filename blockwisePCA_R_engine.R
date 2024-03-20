@@ -83,7 +83,7 @@ mcl_abc2matrix(edge_df, domain_size)
 }
 
 run_mcl<- function(inputPath, outputPath, inflation){
-system(sprintf('~/local/bin/mcl %s --abc  -I %.2f -scheme 7 -o %s', inputPath, inflation, outputPath))
+system(sprintf('mcl %s --abc  -I %.2f -scheme 7 -o %s', inputPath, inflation, outputPath))
 }
 
 read_mcl_clustering<- function( file_path, domain_size ){
