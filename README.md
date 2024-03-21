@@ -97,7 +97,8 @@ Summary of results (run after Experiment I & II):
         #(...)
         Rscript --no-save nPC_comparison_table.R 5
 
-One can run `run_comp_tables.script` instead, which will execute those commands one-by-one in a sequential manner.
+We have run this part in parallel using HPC system.
+One can run `run_comp_tables.script` instead, which will execute those commands one-by-one in a sequential manner. Running in that manner might take some time.
 
         ./run_comp_tables.script
 
