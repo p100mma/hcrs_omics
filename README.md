@@ -16,6 +16,10 @@ Then run following commands
 	sudo docker build -t hcrs .
 	sudo docker run -it -v .:/home/hcrs_omics hcrs
 
+This will open up micro environment with all necessary R packages and mcl installed. To run each script, execute
+
+	Rscript --no-save <script_name.R>
+ 
 
 ## Uses:
 
@@ -61,7 +65,8 @@ Experiment I (run in that order):
   	Rscript --no-save metalogs.R 70
    
 We have used an HPC system to run this part in parallel.
-
+To run sequentially through the docker image provided, one can execute `run_metalogs.script` (it might take 20-30 minutes that way):
+	./run_metalogs.script
 
 Experiment II:
 - `BRCA_nPC.R` - should be run with command line argument ranging from 2 to 5:
@@ -70,7 +75,10 @@ Experiment II:
         #(...)
         Rscript --no-save BRCA_nPC.R 5
 
-We have used an HPC system to run this part in parallel.
+We have used an HPC system to run this part in parallel. 
+Again, to run sequentially through the docker image provided, execute `run_vary_nPC.script`. Be prepared that it might take a while.
+
+	./run_vary_nPC.script
 
 TOM hierarchical clustering plots (run after executing Experiment I scripts):
 - `tom.R`
