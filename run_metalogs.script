@@ -2,6 +2,6 @@
 
 for i in {1..70}
 do
-	echo i
+	echo 'processing metalog fit '$i'/70'
 	Rscript --no-save metalogs.R $i
 done
