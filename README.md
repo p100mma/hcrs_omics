@@ -66,6 +66,7 @@ Experiment I (run in that order):
    
 We have used an HPC system to run this part in parallel.
 To run sequentially through the docker image provided, one can execute `run_metalogs.script` (it might take 20-30 minutes that way):
+
 	./run_metalogs.script
 
 Experiment II:
@@ -78,7 +79,7 @@ Experiment II:
 We have used an HPC system to run this part in parallel. 
 Again, to run sequentially through the docker image provided, execute `run_vary_nPC.script`. Be prepared that it might take a while.
 
-	./run_vary_nPC.script
+       ./run_vary_nPC.script
 
 TOM hierarchical clustering plots (run after executing Experiment I scripts):
 - `tom.R`
@@ -86,9 +87,21 @@ TOM hierarchical clustering plots (run after executing Experiment I scripts):
 
 Summary of results (run after Experiment I & II):
 - `computation_heavy_metrics.R`
-- `nPC_comparison_table.R`
+- `nPC_comparison_table.R`*
 - `sim_comparison_table.R`
 - `concat_tables.R`
+
+*should be run with command line argument ranging from 2 to 5:
+  
+        Rscript --no-save nPC_comparison_table.R 2
+        #(...)
+        Rscript --no-save nPC_comparison_table.R 5
+
+One can run `run_comp_tables.script` instead, which will execute those commands one-by-one in a sequential manner.
+
+        ./run_comp_tables.script
+
+
 
 Topology characteristics plots & KS distances (latter in the supplementary material):
 - `topology_plots_KSdistances.R`*
