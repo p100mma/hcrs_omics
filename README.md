@@ -50,7 +50,8 @@ Preprocessed and prefiltered as in:
 functions doing most of the work
 - `blockwisePCA_R_engine.R`
 
-Experiment I (run in that order):
+### Experiment I (run in that order):
+
 - `BRCA_decomposition.R`
 - `metalogs.R`*
 - `BRCA_simulation.R`
@@ -69,7 +70,8 @@ To run sequentially through the docker image provided, one can execute `run_meta
 
 	./run_metalogs.script
 
-Experiment II:
+### Experiment II:
+
 - `BRCA_nPC.R` - should be run with command line argument ranging from 2 to 5:
   
         Rscript --no-save BRCA_nPC.R 2
@@ -81,11 +83,13 @@ Again, to run sequentially through the docker image provided, execute `run_vary_
 
        ./run_vary_nPC.script
 
-TOM hierarchical clustering plots (run after executing Experiment I scripts):
+### TOM hierarchical clustering plots (run after executing Experiment I scripts):
+
 - `tom.R`
 - `tomPlots.R`
 
-Summary of results (run after Experiment I & II):
+### Summary of results (run after Experiment I & II):
+
 - `computation_heavy_metrics.R`
 - `nPC_comparison_table.R`*
 - `sim_comparison_table.R`
@@ -104,7 +108,8 @@ One can run `run_comp_tables.script` instead, which will execute those commands 
 
 
 
-Topology characteristics plots & KS distances (latter in the supplementary material):
+### Topology characteristics plots & KS distances (latter in the supplementary material):
+
 - `topology_plots_KSdistances.R`*
 
 *Should be run after Experiment I and `computation_heavy_metrics.R`
