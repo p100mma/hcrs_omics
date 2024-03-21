@@ -39,7 +39,7 @@ X_tables_mcl<-lapply(X_tables_mcl, function(x) x[,!noise_mask])
 X_tables<- c( list( orig=X,
 		    WGCNA=WGCNA_tab,
 		    SVD_70=SVD_res70$X_rec, 
-		    SVD_10=SVD_res10$X_rec, 
+		    SVD_10=SVD_res10$X_rec 
 		  ),
 	      X_tables_mcl[1:3],
 	     list( SVD_70_noise=SVD_res70$X_rec_noise,
