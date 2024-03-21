@@ -51,4 +51,4 @@ add_noise=TRUE, uncenter=TRUE)
 gs[[a]]$rec<-get_full_reconstruction(X,gs[[a]]$hcluster_blockPCA, gs[[a]]$hclustering_list, 
 add_noise=FALSE, uncenter=TRUE) 
 }
-saveRDS(gs, sprintf("~/corsimTest/mcl_impr/vary_nPC/decomposition_MCL_nPC%d.rds",k))
+saveRDS(gs, sprintf("/vary_nPC/decomposition_MCL_nPC%d.rds",k))
