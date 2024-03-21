@@ -53,7 +53,8 @@ colnames(SVD_res10$X_rec_noise)<- colnames(X)
 
 for (v in rev(names(X_tables))){
 message(v)
-COR<- cor(X_tables[[v]]); 
-dth_v<-  dtom_hcl(COR^2, method='average'); rm(COR)
+COR<- cor(X_tables[[v]]);  gc()
+dth_v<-  dtom_hcl(COR^2, method='average'); rm(COR);  gc()
 saveRDS(dth_v, paste0(v,'_dtom_hclust.rds'))
+rm(dth_v);
 }
