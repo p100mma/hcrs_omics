@@ -86,14 +86,14 @@ Again, to run sequentially through the docker image provided, execute `run_vary_
 ### TOM hierarchical clustering plots (run after executing Experiment I scripts):
 
 - `tom.R`
-- `tomPlots.R`
+- `tomPlots.R` - generates `.jpg` files in the main repo directory.
 
 ### Summary of results (run after Experiment I & II):
 
 - `computation_heavy_metrics.R`
 - `nPC_comparison_table.R`*
 - `sim_comparison_table.R`
-- `concat_tables.R`
+- `concat_tables.R`  - generates `.csv` table in the `vary_nPC` folder. 
 
 *should be run with command line argument ranging from 2 to 5:
   
@@ -110,6 +110,6 @@ One can run `run_comp_tables.script` instead, which will execute those commands 
 
 ### Topology characteristics plots & KS distances (latter in the supplementary material):
 
-- `topology_plots_KSdistances.R`*
+- `topology_plots_KSdistances.R`* - generates `.jpg` files (plots) and `.csv` file (table of KS distances), all of them in the main directory. 
 
 *Should be run after Experiment I and `computation_heavy_metrics.R`
