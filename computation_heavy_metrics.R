@@ -43,7 +43,7 @@ X_tables<- c( list( orig=X,
 		  ),
 	      X_tables_mcl[1:3],
 	     list( SVD_70_noise=SVD_res70$X_rec_noise,
-	           SVD_10_noise=SVD_res10$X_rec_noise,
+	           SVD_10_noise=SVD_res10$X_rec_noise
 		),
 	      X_tables_mcl[4:6]
 	    )
