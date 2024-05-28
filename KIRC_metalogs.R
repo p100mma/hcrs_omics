@@ -1,0 +1,11 @@
+args=commandArgs(trailingOnly=TRUE)
+j = as.integer(args[[1]])
+PCmat_orig<- readRDS('PCs/KIRC_PCmat_orig.rds')
+library(rmetalog)
+source('blockwisePCA_R_engine.R')
+set.seed(j)
+if (j!=6) n_term=5 else n_term=10
+meta_j<-metalog(PCmat_orig[,j], term_limit=n_term, step_len=.01)
+saveRDS(meta_j,sprintf('PCs/KIRC_metalog_%d.rds',j) )
+H_j<-hidden_normalPC(ref_PC= PCmat_orig[,j], target_metalog=meta_j, term=n_term)
+saveRDS( H_j, sprintf('PCs/KIRC_PChidden_normal%d.rds',j))
