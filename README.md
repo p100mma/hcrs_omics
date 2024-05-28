@@ -44,7 +44,7 @@ Original source:
 Preprocessed and prefiltered as in:
 - Polewko-Klim A, Mnich K, Rudnicki W, Robust Data Integration Method for Classification of Biomedical Data. Journal ofMedical Systems, 2021; 45.
 
-`KIRC_gene_expr_data.rds` - data for additional tests, kidney cancer study from TCGA. Sources:
+`KIRC_gene_expr_data.rds` - data for additional tests, kidney cancer study from TCGA. In our study we model profiles of 605 samples, limiting ourselves to 15166 genes with highest variance. Sources:
 - Peng L, et al. Large-scale rna-seq transcriptome analysis of 4043 cancers and 548 normal tissue controls across 12 tcga cancer types. Scientific Reports 2015;5.
 - initial basic processing: olewko-Klim A, Rudnicki W: Analysis of ensemble feature selection for correlated high-dimensional rna-seq cancer data. In: V Krzhizhanovskaya, et al. (eds.), Computational Science - ICCS 2020. Cham: Springer International Publishing, 2020 525–538
 
@@ -54,6 +54,9 @@ functions doing most of the work
 - `blockwisePCA_R_engine.R`
 
 ### Experiment I(breast cancer data, run in that order):
+
+Note: for BRCA dataset, 16 GB RAM is sufficient.
+
 
 - `BRCA_decomposition.R`
 - `metalogs.R`*
@@ -118,6 +121,9 @@ One can run `run_comp_tables.script` instead, which will execute those commands 
 *Should be run after Experiment I and `computation_heavy_metrics.R`
 
 ### Follow up test on KIRC dataset:
+
+Note: The functions are not yet optimized to do things piece-wise, given memory constraints. Given much higher dimensionality here, to process this dataset, we have used machine with 60 GB RAM.  Be warned that if you want to replicate results and the amount of memory you have is lower than that, it might not be sufficient. 
+
 
 - `KIRC_decomposition.R`
 - `KIRC_metalogs.R`*
