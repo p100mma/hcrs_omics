@@ -1,5 +1,12 @@
 # hcrs_omics
 
+## R package
+
+Under construction - user friendly interface to the HCR and HCS, allowing for using custom clustering functions. Link to development version of the package will be placed
+
+`HERE`
+
+
 # License
 The software is licensed under the GNU General Public License, version 3.
 
