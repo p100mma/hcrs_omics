@@ -2,9 +2,9 @@
 
 ## R package
 
-Under construction - user friendly interface to the HCR and HCS, allowing for using custom clustering functions. Link to development version of the package will be placed
+Under construction - user friendly interface to the HCR and HCS, allowing for using custom clustering functions. Development version of the package can be found here:
 
-`HERE`
+	https://github.com/p100mma/HCCsim
 
 
 # License
